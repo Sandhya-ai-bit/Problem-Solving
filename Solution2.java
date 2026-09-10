@@ -206,11 +206,36 @@ class Solution2 {
 
     public void pattern18(int n) {
         for (int i = 0; i < n; i++) {
-            for (char ch = (char) ('E' - i); ch <= 'E'; ch++) 
-            {
+            for (char ch = (char) ('E' - i); ch <= 'E'; ch++) {
                 System.out.print(ch + " ");
-           }
-           System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    public void pattern19(int n) {
+        for (int i = 1; i <= 2 * n; i++) {
+
+            int stars = n - i + 1;
+            int spaces = 2 * (i - 1);
+            int stars2 = n - i + 1;
+
+            if (i > n) {
+                stars = i - n;
+                spaces = 2 * (2 * n - i);
+                stars2 = i - n;
+            }
+
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= stars2; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 
@@ -220,7 +245,7 @@ class Solution2 {
         int[] arr = { 5 };
 
         for (int n : arr) {
-            s.pattern18(n);
+            s.pattern19(n);
             System.out.println();
         }
     }
