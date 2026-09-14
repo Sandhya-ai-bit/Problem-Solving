@@ -214,14 +214,14 @@ class Solution2 {
     }
 
     public void pattern19(int n) {
-        for (int i = 1; i <= 2 * n; i++) {
+        for (int i = 1; i <= 2 * n; i++) { // for total no. of rows
 
-            int stars = n - i + 1;
+            int stars = n - i + 1; // for the upper part
             int spaces = 2 * (i - 1);
             int stars2 = n - i + 1;
 
             if (i > n) {
-                stars = i - n;
+                stars = i - n; // reverse : for the lower part
                 spaces = 2 * (2 * n - i);
                 stars2 = i - n;
             }
@@ -239,13 +239,38 @@ class Solution2 {
         }
     }
 
+    public void pattern20(int n) {
+        int spaces = 2 * n - 2;
+        for (int i = 1; i <= 2 * n - 1; i++) {
+            int stars = i;
+            if (i > n)
+                stars = 2 * n - i;
+            // stars
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+            // spaces
+            for (int j = 1; j <= spaces; j++)
+                System.out.print(" ");
+            // stars
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            if (i < n)
+                spaces -= 2;
+            else
+                spaces += 2;
+        }
+    }
+
     public static void main(String[] args) {
         Solution2 s = new Solution2();
 
         int[] arr = { 5 };
 
         for (int n : arr) {
-            s.pattern19(n);
+            s.pattern20(n);
             System.out.println();
         }
     }
