@@ -19,4 +19,4 @@ public class CountDigits {
         System.out.println(obj.countDigits(234));
     }
 }
-// time complexity: O(log10(N))
+// time complexity: O(log10(N)) 10 because the number is divided by 10
