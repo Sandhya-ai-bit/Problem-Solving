@@ -310,7 +310,7 @@ class Solution2 {
         int[] arr = { 5 };
 
         for (int n : arr) {
-            s.pattern22(n);
+            s.pattern22(n); // function calling
             System.out.println();
         }
     }
