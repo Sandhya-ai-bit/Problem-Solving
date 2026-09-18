@@ -22,3 +22,4 @@ public class palindrome {
         System.out.println(obj.PalindromeNum(77));
     }
 }
+// Time Complexity: O(log10N + 1)
