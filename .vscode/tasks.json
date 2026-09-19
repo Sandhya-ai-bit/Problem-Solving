@@ -7,7 +7,7 @@
             "command": "cmd",
             "args": [
                 "/c",
-                "javac \"${file}\" && java -cp \"${fileDirname}\" ${fileBasenameNoExtension} < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\""
+                "javac \"${file}\" && java -cp \"${fileDirname}\" ${fileBasenameNoExtension} < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\output.txt\""
             ],
             "group": {
                 "kind": "build",
