@@ -1,3 +1,5 @@
+package BasicMaths;
+
 public class ReverseNum {
     public void ReverseNumber(int n) {
         int reverse = 0;

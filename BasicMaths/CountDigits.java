@@ -1,3 +1,5 @@
+package BasicMaths;
+
 public class CountDigits {
 
     public int countDigits(int n) {
@@ -6,7 +8,7 @@ public class CountDigits {
 
         while (n > 0) {
             count++;
-            n = n / 10; // no. of times it is divible by 10 , is the count of digits
+            n = n / 10;
         }
 
         return count;

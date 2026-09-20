@@ -1,3 +1,5 @@
+package BasicMaths;
+
 public class palindrome {
     public boolean PalindromeNum(int n) {
         int reverse = 0;
